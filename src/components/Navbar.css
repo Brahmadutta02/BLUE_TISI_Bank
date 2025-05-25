@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    /* background: rgba(0, 0, 0, 0.2);  */
+    color: white;
+
+  }
+  
+  .navbar-logo {
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: -25rem; /* Added left margin to move logo slightly left */
+  }
+
+  .navbar-button {
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: -25rem; /* Added left margin to move logo slightly left */
+  }
+  
+  .logo-img {
+    height: 40px; /* Adjust as needed - Increased size */
+  }
+  
+  .credit-card-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #BB133E;
+    color: white;
+    border: none;
+    border-radius: 20px; /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .credit-card-button:hover {
+    background-color: #ce224d;
+  } 

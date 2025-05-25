@@ -1,0 +1,112 @@
+.thank-you-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0b0c2a 0%, #2b0a3d 50%, #e21b4c 100%); /* Same gradient background as landing page */
+    color: white;
+}
+
+.thank-you-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.thank-you-wrapper {
+    max-width: 600px; /* Adjust as needed */
+    background: #fff; /* White background */
+    padding: 3rem; /* Increased padding */
+    border-radius: 15px;
+    text-align: center;
+    color: #333; /* Dark text color */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Same shadow as form */
+}
+
+.checkmark-icon {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    margin-bottom: 1.5rem;
+    /* You might want to add a subtle animation or style here */
+}
+
+.thank-you-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0b0c2a; /* Dark blue heading color */
+}
+
+.thank-you-wrapper p {
+    font-size: 1.1rem;
+    color: #555; /* Slightly lighter text color */
+    margin-bottom: 2rem;
+}
+
+.back-to-home-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #0b0c2a; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.back-to-home-link:hover {
+    color: #e21b4c; /* Link hover color */
+}
+
+.download-app-section {
+    margin-top: 3rem; /* Space above the download section */
+    border-top: 1px solid #ccc; /* Divider line */
+    padding-top: 2rem;
+}
+
+.download-app-section p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.app-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Space between badges */
+}
+
+.app-badge {
+    height: 50px; /* Adjust badge size as needed */
+    width: auto; /* Ensure consistent size while maintaining aspect ratio */
+    /* Add hover effects if desired */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .thank-you-wrapper {
+        padding: 2rem; /* Adjusted padding for smaller screens */
+    }
+
+    .checkmark-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .thank-you-wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .thank-you-wrapper p {
+        font-size: 1rem;
+    }
+
+    .app-badges {
+        flex-direction: column; /* Stack badges on smaller screens */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .app-badge {
+        height: 40px; /* Adjusted badge size for smaller screens */
+        width: auto; /* Ensure consistent size */
+    }
+} 

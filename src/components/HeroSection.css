@@ -1,0 +1,95 @@
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.hero-text {
+  max-width: 50%;
+  margin-left: 11rem;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.apply-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background-color: #BB133E;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.apply-button i {
+  margin-right: 0.5rem;
+}
+
+.apply-button:hover {
+  background-color: #ce224d;
+}
+
+.hero-images {
+  max-width: 50%;
+  position: relative;
+}
+
+/* Placeholder styles for images - replace with actual image styling */
+.credit-card-placeholder {
+  width: 250px;
+  height: 150px;
+  background-color: grey; /* Placeholder color */
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.red-card {
+  background-color: #c41230; /* Red color from the image */
+  transform: rotate(0deg);
+  position: absolute;
+  bottom: -5px;
+  right: 170px;
+  z-index: 1;
+}
+
+.dark-card {
+  background-color: #000000; /* Dark color from the background */
+  transform: rotate(0deg);
+  position: absolute;
+  top: -45px;
+  right: 100px;
+  z-index: 3;
+}
+
+.blue-card {
+    background-color: #002664;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 40px;
+    right: 200px;
+    z-index: 3;
+}
+
+.arrow-placeholder {
+  width: 100px;
+  height: 50px;
+  background-color: lightgrey; /* Placeholder color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+} 

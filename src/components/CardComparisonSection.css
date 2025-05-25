@@ -1,0 +1,155 @@
+.card-comparison {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #ffffff; /* White background */
+}
+
+.card-comparison .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.comparison-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #0b0c2a; /* Dark color */
+}
+
+.card-visuals {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+  height: 200px; /* Adjust based on image size */
+}
+
+/* Placeholder styles for card images - replace with actual image styling */
+.comp-card-placeholder {
+  width: 200px;
+  height: 120px;
+  background-color: grey; /* Placeholder color */
+  border-radius: 10px;
+  position: absolute;
+}
+
+.red-comp-card {
+  background-color: #e21b4c; /* Red */
+  transform: rotate(0deg);
+  top: 75px;
+  left: 203px; /* Adjust position */
+  z-index: 3;
+}
+
+.dark-comp-card {
+  background-color: #0b0c2a; /* Dark */
+  transform: rotate(0deg);
+  top: 75px;
+  left: 480px; /* Adjust position */
+  z-index: 2;
+}
+
+.blue-comp-card {
+    background-color: #002664; /* Blue */
+    transform: rotate(0deg);
+    top: 75px;
+    left: 760px; /* Adjust position */
+    z-index: 1;
+}
+
+.comparison-table {
+  display: grid; /* Use grid for the table */
+  grid-template-columns: 150px repeat(3, 1fr); /* Column for titles + 3 equal columns for data */
+  gap: 10px; /* Gap between grid items */
+}
+
+.table-row {
+  display: contents; /* Allow grid items to be direct children */
+}
+
+.table-cell {
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners for boxes */
+  text-align: left;
+  color: #333;
+  /* Remove borders */
+  border: none;
+}
+
+.header-row .table-cell {
+  font-weight: bold;
+  color: #0b0c2a;
+   /* Slightly darker background for headers */
+  text-align: center; /* Center header text */
+}
+
+.table-row .table-cell:first-child {
+    font-weight: bold;
+    color: #0b0c2a;
+    background-color: transparent; /* No background for row titles */
+    text-align: left;
+}
+
+/* Adjust first cell in header row */
+.header-row .table-cell:first-child {
+    background-color: transparent; /* No background for the top-left cell */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .comparison-title {
+    font-size: 2rem;
+  }
+
+  .card-visuals {
+      display: none; /* Hide card visuals on small screens */
+  }
+
+  .comparison-table {
+    grid-template-columns: 1fr; /* Stack items on small screens */
+    gap: 10px; /* Gap between stacked items */
+  }
+
+  .table-row {
+      display: flex; /* Use flex for stacking within a row */
+      flex-direction: column;
+      gap: 5px; /* Smaller gap within stacked row items */
+  }
+
+  .table-cell {
+      text-align: center;
+      border-bottom: 1px solid #eee; /* Add border back for separation in stacked view */
+      padding: 0.8rem;
+  }
+
+  .table-cell:last-child {
+    border-bottom: none;
+  }
+
+  .table-row .table-cell:first-child {
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      border-bottom: 1px solid #eee; /* Border for separation */
+  }
+
+  .header-row .table-cell {
+      background-color: #e9e9e9; /* Keep background for headers */
+      border-bottom: 1px solid #ccc; /* Darker border for header separation */
+  }
+
+  .header-row .table-cell:first-child {
+      background-color: transparent; /* No background for the top-left cell */
+  }
+
+  .table-row:last-child .table-cell:last-child {
+    border-bottom: none;
+  }
+}
+
+.table-row:not(.header-row) .table-cell {
+  background-color: #EDF3FB;
+}
+
+.table-row:not(.header-row) .table-cell:first-child {
+  background-color: transparent;
+} 
