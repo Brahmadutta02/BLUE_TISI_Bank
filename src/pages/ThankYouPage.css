@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0b0c2a 0%, #2b0a3d 50%, #e21b4c 100%); /* Same gradient background as landing page */
+    background: radial-gradient(circle at -60% -300%, #0053C2 45%, transparent 74%),              
+  radial-gradient(circle at 104% 113%, #BB133E -18%, transparent 56%),              
+  linear-gradient(37deg, #002664 68%, #111827 129%);
     color: white;
 }
 
@@ -11,14 +13,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    
 }
 
 .thank-you-wrapper {
-    max-width: 600px; /* Adjust as needed */
+    width: 80%; /* Adjust as needed */
     background: #fff; /* White background */
     padding: 3rem; /* Increased padding */
-    border-radius: 15px;
+    border-radius: 50px 50px 0 0;
     text-align: center;
     color: #333; /* Dark text color */
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Same shadow as form */
@@ -46,7 +48,7 @@
 .back-to-home-link {
     display: inline-block;
     margin-top: 1.5rem;
-    color: #0b0c2a; /* Link color */
+    color: #0053C2; /* Link color */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s ease;
@@ -58,8 +60,8 @@
 
 .download-app-section {
     margin-top: 3rem; /* Space above the download section */
-    border-top: 1px solid #ccc; /* Divider line */
-    padding-top: 2rem;
+    
+    padding-top: 5rem;
 }
 
 .download-app-section p {

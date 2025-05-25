@@ -99,15 +99,18 @@ function ApplicationForm() {
       case 'checkbox':
         return (
           <div className="checkbox-group">
-            <input
-              type="checkbox"
-              id={field.id}
-              name={field.id}
-              checked={!!formState[field.id]}
-              onChange={handleInputChange}
-              required={field.required}
-            />
-            <label htmlFor={field.id}>{field.label}</label>
+            <label className="custom-checkbox">
+              <input
+                type="checkbox"
+                id={field.id}
+                name={field.id}
+                checked={!!formState[field.id]}
+                onChange={handleInputChange}
+                required={field.required}
+              />
+              <span className="checkmark"></span>
+              {field.label}
+            </label>
           </div>
         );
       case 'file':
