@@ -32,12 +32,12 @@
     display: flex; /* Use flexbox for the right group */
     align-items: center; /* Align items vertically */
     gap: 2rem; /* Space between contact and social */
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .footer-logo-img {
     height: 50px; /* Adjust as needed */
-    margin-bottom: 0.5rem; /* Add space between logo and tagline */
+    margin-bottom: 1.5rem; /* Add space between logo and tagline */
 }
 
 .footer-tagline {

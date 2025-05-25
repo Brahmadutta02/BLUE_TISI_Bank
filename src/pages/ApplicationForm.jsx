@@ -5,6 +5,7 @@ import DetailedFooter from '../components/DetailedFooter';
 import ApplicationHeader from '../components/ApplicationHeader';
 import formData from '../data/formData.json';
 import axios from 'axios';
+import bluetisiLogo from '../assets/apply-bluetisi.png';
 
 function ApplicationForm() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -152,6 +153,29 @@ function ApplicationForm() {
 
   const renderStepContent = () => {
     const currentStepData = formData.steps[currentStep - 1];
+    // Special handling for Consent & Declarations step
+    if (currentStepData.title === 'Consent & Declarations') {
+      // Separate signature field from others
+      const signatureField = currentStepData.fields.find(f => f.id === 'signatureUpload');
+      const otherFields = currentStepData.fields.filter(f => f.id !== 'signatureUpload');
+      return (
+        <div className="step-content">
+          <div className="form-grid">
+            {otherFields.map((field) => (
+              <div key={field.id} className="form-group">
+                {field.type !== 'checkbox' && <label htmlFor={field.id}>{field.label}</label>}
+                {renderField(field)}
+              </div>
+            ))}
+          </div>
+          <div className="form-group signature-bottom-left">
+            <label htmlFor={signatureField.id}>{signatureField.label}</label>
+            {renderField(signatureField)}
+          </div>
+        </div>
+      );
+    }
+    // Default rendering for other steps
     return (
       <div className="step-content">
         {/* <h2>{currentStepData.title}</h2> */}
@@ -180,15 +204,30 @@ function ApplicationForm() {
     );
   };
 
+  // Utility to convert section title to a valid CSS class
+  const getSectionClass = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/&/g, 'and')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+  };
+
   return (
     <div className="application-page-container">
-      <ApplicationHeader />
+      <div classname="logo-image" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
+        <img src={bluetisiLogo} alt="Blue TISI Company Logo" style={{ height: '1%', width: '100%' }} />
+        
+      </div>
       <div className="form-divider"></div>
       <div className="application-form-content">
         <div className="form-wrapper">
           {renderStepIndicator()}
           <div className="section-label">{formData.steps[currentStep - 1].title}</div>
-          <form className="application-form" onSubmit={handleSubmit}>
+          <form
+            className={`application-form ${getSectionClass(formData.steps[currentStep - 1].title)}-section`}
+            onSubmit={handleSubmit}
+          >
             {renderStepContent()}
             <div className="form-navigation">
               {currentStep > 1 && (
@@ -202,7 +241,7 @@ function ApplicationForm() {
                 </button>
               ) : (
                 <button type="submit" className="submit-button">
-                  Submit Application
+                  Submit Form
                 </button>
               )}
             </div>
