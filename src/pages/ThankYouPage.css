@@ -22,7 +22,7 @@
     padding: 3rem; /* Increased padding */
     border-radius: 50px 50px 0 0;
     text-align: center;
-    color: #333; /* Dark text color */
+    color: #000000; /* Dark text color */
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Same shadow as form */
 }
 
@@ -34,9 +34,10 @@
 }
 
 .thank-you-wrapper h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: #0b0c2a; /* Dark blue heading color */
+    font-weight: 600;
 }
 
 .thank-you-wrapper p {

@@ -14,7 +14,7 @@ function ThankYouPage() {
       <div className="thank-you-content">
         <div className="thank-you-wrapper">
           <img src={checkmarkIcon} alt="Checkmark Icon" className="checkmark-icon" />
-          <h2>Thank You For Submitting Your Application!</h2>
+          <h2>Thank You For Submitting <br></br>Your Application!</h2>
           <p>You'll receive a decision within 2 business days</p>
           <Link to="/" className="back-to-home-link">← Back to home</Link>
 
